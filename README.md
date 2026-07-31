@@ -1,6 +1,6 @@
 # TIP ESG Reporting Platform
 
-*A dissertation build on synthetic data*
+*A dissertation build — synthetic data, no cloud backend, no real client data.*
 
 ---
 
@@ -54,23 +54,23 @@ cross-company benchmarking.
 
 **Sign-in** — role-based login (client company vs. dss+ analyst)
 
-<img src="images/screenshot_login.png" width="380">
+<img src="images/Picture15.png" width="380">
 
 **Client home** — at-a-glance KPIs and submission status for the signed-in company
 
-<img src="images/screenshot_home_dashboard.png" width="700">
+<img src="images/Picture11.png" width="700">
 
 **Submit Data** — structured KPI entry, pre-filled from last year's figures where applicable
 
-<img src="images/screenshot_submit_data.png" width="700">
+<img src="images/Picture17.png" width="700">
 
 **Verification Queue** — analysts review flagged fields and accept/query them, with full audit history
 
-<img src="images/screenshot_verification_queue.png" width="700">
+<img src="images/Picture12.png" width="700">
 
 **Benchmarking** — once verified, a company's data is instantly comparable against the sector
 
-<img src="images/screenshot_benchmarking.png" width="700">
+<img src="images/Picture10.png" width="700">
 
 *(A few more screens — fuel/energy entry, health & safety data, cross-company
 trend analysis — are included in `images/` but left out here to keep this
@@ -109,8 +109,8 @@ energy use from carbon impact rather than reducing energy use itself. CO₂
 intensity in 2025 clusters most companies in the 0.60–0.89 tCO₂/t range, with
 a longer tail of laggards above 0.90.
 
-<img src="images/result_sector_intensity_renewable_share.png" width="600">
-<img src="images/result_co2_intensity_distribution.png" width="500">
+<img src="images/Picture2.png" width="600">
+<img src="images/Picture1.png" width="500">
 
 **Reporting effort, manual vs. platform.** Measured across three companies,
 every stage of the reporting cycle — collection, processing, validation,
@@ -118,9 +118,9 @@ analysis, verification — takes markedly fewer analyst-hours on the platform
 than the manual process, with the biggest gains in validation and analysis.
 Total cycle time per company drops from roughly 18–21 hours to 7–8 hours.
 
-<img src="images/result_effort_manual_vs_platform.png" width="480">
-<img src="images/result_reporting_cycle_time.png" width="480">
-<img src="images/result_effort_by_stage_stacked.png" width="500">
+<img src="images/Picture3.png" width="480">
+<img src="images/Picture4.png" width="480">
+<img src="images/Picture5.png" width="500">
 
 **Why unit standardisation matters.** Before the platform, KPI fields were
 reported in as many as 7–8 different units across companies (energy fields
@@ -128,9 +128,9 @@ especially). Estimated manual reporting time across seven companies without
 standardisation ranged from 24 to 32 analyst-hours — most of that variation
 traceable to unit reconciliation, not the underlying data collection itself.
 
-<img src="images/result_fields_by_distinct_units.png" width="480">
-<img src="images/result_distinct_units_per_field.png" width="480">
-<img src="images/result_manual_reporting_time_seven_companies.png" width="480">
+<img src="images/Picture6.png" width="480">
+<img src="images/Picture8.png" width="480">
+<img src="images/Picture7.png" width="480">
 
 *(Full-size versions of all charts, along with a few not shown here, are in
 `images/`.)*
