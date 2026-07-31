@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Data — MASTER FILES are committed so Azure App Service and fresh clones
+# load real data without a separate bootstrap step.  The app (data_utils.py)
+# updates these files in place at runtime; the committed versions are the
+# last-known-good starting point for any new environment.
+#
+# Runtime-generated directories are still gitignored: versions/ is parquet
+# audit snapshots, members/ and reports/ are derivative outputs that the app
+# regenerates from the master on every save.
+data_storage/versions/
+data_storage/members/
+data_storage/reports/
+data_storage/chat_logs/
+data_storage/validated/
+
+# Extracted data (intermediate output of extract_conversion_data.py)
+extracted_*.json
+
+# Environment
+.env
+*.lock
+!*.py
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Virtual environment
+venv/
+.venv/
