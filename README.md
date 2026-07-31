@@ -48,35 +48,28 @@ Rubber Corp, and Pinnacle Elastomers.
 
 ### 3.1 The platform, walked through
 
-The screenshots below follow one submission end-to-end: a company signs in,
-submits its data, an analyst verifies it, and the result feeds into
-cross-company benchmarking.
-
 **Sign-in** — role-based login (client company vs. dss+ analyst)
 
-<img src="images/Picture15.png" width="380">
+<img src="images/Picture3.png" width="380">
 
 **Client home** — at-a-glance KPIs and submission status for the signed-in company
 
-<img src="images/Picture11.png" width="700">
+<img src="images/Picture7.png" width="700">
 
 **Submit Data** — structured KPI entry, pre-filled from last year's figures where applicable
 
-<img src="images/Picture17.png" width="700">
+<img src="images/Picture4.png" width="700">
 
 **Verification Queue** — analysts review flagged fields and accept/query them, with full audit history
 
-<img src="images/Picture12.png" width="700">
+<img src="images/Picture6.png" width="700">
 
 **Benchmarking** — once verified, a company's data is instantly comparable against the sector
 
-<img src="images/Picture10.png" width="700">
+<img src="images/Picture8.png" width="700">
 
-*(A few more screens — fuel/energy entry, health & safety data, cross-company
-trend analysis — are included in `images/` but left out here to keep this
-walkthrough short.)*
 
-### 3.2 This build vs. the real, deployed platform
+### This build vs. the real, deployed platform
 
 | | **Production (live, not in this repo)** | **This dissertation build** |
 |---|---|---|
@@ -87,7 +80,7 @@ walkthrough short.)*
 | Client data | Real client submissions | 100% synthetic/dummy data |
 | Infra-as-code | Bicep templates, CI/CD pipeline | Not included |
 
-### 3.3 What's deliberately not in this repo
+### What's deliberately not in this repo
 
 The Azure SQL client, Azure Blob client, Bicep infrastructure templates, the
 CI/CD pipeline, the SQL schema files, and the App Service startup script were
@@ -97,7 +90,7 @@ subscription or risks exposing internal infrastructure that doesn't belong in
 a public academic repository. The app runs unchanged without it — it simply
 falls back to local CSV storage and a local login form.
 
-## 4. Results
+## Results
 
 Two things this dissertation measures: how the sector's sustainability
 metrics have moved over time, and how much manual effort the platform removes
@@ -109,8 +102,8 @@ energy use from carbon impact rather than reducing energy use itself. CO₂
 intensity in 2025 clusters most companies in the 0.60–0.89 tCO₂/t range, with
 a longer tail of laggards above 0.90.
 
-<img src="images/Picture2.png" width="600">
-<img src="images/Picture1.png" width="500">
+<img src="images/Picture17.png" width="600">
+<img src="images/Picture18.png" width="500">
 
 **Reporting effort, manual vs. platform.** Measured across three companies,
 every stage of the reporting cycle — collection, processing, validation,
@@ -118,9 +111,9 @@ analysis, verification — takes markedly fewer analyst-hours on the platform
 than the manual process, with the biggest gains in validation and analysis.
 Total cycle time per company drops from roughly 18–21 hours to 7–8 hours.
 
-<img src="images/Picture3.png" width="480">
-<img src="images/Picture4.png" width="480">
-<img src="images/Picture5.png" width="500">
+<img src="images/Picture16.png" width="480">
+<img src="images/Picture15.png" width="480">
+<img src="images/Picture14.png" width="500">
 
 **Why unit standardisation matters.** Before the platform, KPI fields were
 reported in as many as 7–8 different units across companies (energy fields
@@ -128,14 +121,14 @@ especially). Estimated manual reporting time across seven companies without
 standardisation ranged from 24 to 32 analyst-hours — most of that variation
 traceable to unit reconciliation, not the underlying data collection itself.
 
-<img src="images/Picture6.png" width="480">
-<img src="images/Picture8.png" width="480">
-<img src="images/Picture7.png" width="480">
+<img src="images/Picture12.png" width="480">
+<img src="images/Picture10.png" width="480">
+<img src="images/Picture11.png" width="480">
 
 *(Full-size versions of all charts, along with a few not shown here, are in
 `images/`.)*
 
-## 5. Running It Yourself
+## Running It Yourself
 
 ```bash
 # 1. Create and activate a virtual environment
@@ -222,8 +215,6 @@ convenience, not a real credential.
   be pointed at a different backend without rewriting it.
 - **Every comment event is versioned** — save, seen, reject, and accept each
   produce their own audit-trail entry.
-- **No kaleido dependency** — PDF charts use matplotlib's Agg backend instead
-  of Plotly's image export.
 - This repository demonstrates the *application design* — the submission →
   verification → benchmarking workflow and the data architecture — independent
   of any specific cloud vendor and without touching real client data. The
